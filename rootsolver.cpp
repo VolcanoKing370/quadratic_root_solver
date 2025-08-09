@@ -20,6 +20,10 @@ int main(){
 	
 	if(discriminant < 0) {
 		std::cout << "Sorry chief, the discriminant is negative, no real roots" << std::endl;
+		discriminant = -1*discriminant;
+		root1 = sqrt(discriminant)/(2*a);	// imaginary component 	(Im)
+		root2 = -1*b/(2*a);					// real component 		(Re)
+		std::cout << "But we have complex roots:" << std::endl << "x = " << root2 << " + " << root1 << "i" << std::endl << "x = " << root2 << " - " << root1 << "i" << std::endl;
 		return 0;
 	}
 	
